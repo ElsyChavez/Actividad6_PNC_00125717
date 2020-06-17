@@ -54,10 +54,20 @@
 	
 	<br>
 	
-	<form th:action = "@{/filtrarEstudiante}" method = "post">
+	<form th:action = "@{/actualizarEstudiante}" method = "post">
+		<label>Actualizar estudiante por codigo: </label>
+		<input type="number" name="codigo">
+		<br>
+		<input type="submit" value="Actualizar">
+	</form>
+	
+	<br>
+	
+	<!-- <form th:action = "@{/filtrarEstudiante}" method = "post">
 		<label>Ingrese la cadena por la que desea filtrar: </label>
 		<input type="submit" value="Filtrar">
 	</form>
+	 -->
 
 </body>
 </html>

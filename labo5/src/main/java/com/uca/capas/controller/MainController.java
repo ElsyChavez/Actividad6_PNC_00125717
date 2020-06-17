@@ -105,5 +105,14 @@ public class MainController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/actualizarEstudiante", method = RequestMethod.POST)
+	public ModelAndView actualizar(@RequestParam(value = "codigo") int id) {
+		ModelAndView mav = new ModelAndView();
+		Estudiante estudiante = estudianteService.findOne(id);
+		mav.addObject("estudiante", estudiante);
+		mav.setViewName("actualizarEstudiante");
+		
+		return mav;
+	}
 
 }
